@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+*{                                  /*everything selector */
+    box-sizing: border-box;         /*makes so size of elements are determined by padding and margin and actual size of content*/
+    font-family: Raleway;           /*default font using the url at top*/
+    color:#777;                  /*default text color - this one is light gray*/
+}
+
+html, body{                         /*get rid of white space around header section*/
+    margin: 0;
+    padding: 0;
+    /*background-color: cadetblue;*/
+}
+nav ul{                             /*uls will still have a margin, this means any ul in the nav will not have  margin*/
+    margin: 0;
+}
+
+.nav li{
+    display: inline;                /*puts nav buttons in a row instead of default column*/
+}
+
+.nav a{
+    display: inline-block;           /*adds pading and height which just inline does not work, this is around buttons in nav bar*/
+    padding: .5em;
+    color: white;
+    text-decoration: none;          /*removed the default underline*/
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);   /*line under buttons in nav*/
+}
+
+.main-nav li{
+    padding: 0 5%;                  /*0 is top and bottom, 5% isleft right, keeps spaceing when screen is larger or smaller*/
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-header{
+    background-color: rgba(0, 0, 0, .6);  /*this is black with transparience of 60%*/
+    background-image: url(images/chainMail.jpg);
+    background-size: cover;  /*expands background in this part as wide and as tall as can w/out surprassing the image - cuts off top and bottom , will grow and shrinkas can*/
+    background-blend-mode: multiply;  /*blends the two backgrounds (color and image together*/
+    padding-bottom: 30px;
+}
+
+.comp-name{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.comp-name-large{
+    font-size: 6em;
+}
+
+.content-section {
+    margin: 1em;            /*margin left, right, top center of this section*/
+}
+
+.container{                  /*this keeps the stuff in the continaer in the middle*/
+    max-width: 900px;       /*if element tries to get bigger than 900px it will stay at 900px*/
+    margin: 0 auto;         /*0 margin top and bottom auto on left and right*/
+    padding: 0 1.5em;
+}
+
+.section-header{
+    font-family: "Metal Mania";   /*the word "About" */
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-comp-image{
+    float: left;            /*text around image  moved image to just above the paragraph to have it at the top of the words*/
+    height: 400px;
+    width: 400px;
+    margin: 15px;           /* push words away from image so there is a space/margin */
+    border-radius: 50%;     /* picture is now a circle */
+}
+
+.main-footer{
+    background-color: #56ccf2;
+    color: white;
+    padding: .25em 0;
+}
+.main-footer-container{
+    display: flex;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+    align-items: center;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header{
+    margin: .5em 15% 2em 15%;       /*first value top  second right side  thrid bottom  fourth left margins*/
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play{
+    display: block;                 /*button did not center on screen becasue buttons are not block elements */
+    margin: 0 auto;                 /*center this play button horizontally*/
+    color:  #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;  /*initially this makes button oval because of the padding, need to remove padding so make it 0 & add width & height*/
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.show-row{
+    border-bottom: 1px solid black; /*bottom border of row*/
+    padding-bottom: 1em;              /*space between row and border, padding in space content and border*/
+    margin-bottom: 1em;               /*margin is outside of border*/
+}
+.show-row:last-child{
+    border-bottom: none;              /*last list item does not have a line at the bottom*/
+}
+.show-item{
+    display: inline-block;          /*inline block takes up a certain % of width so all the show- class will not add up to 100%*/
+    padding-right: .5em;
+}
+.show-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+.show-city{
+    width: 24%;
+}
+.show-arena{
+    width: 42%;
+}
+.show-btn{
+    max-width: 19%;  /*item will never be larger than 19% of screen*/
+}
+.btn-primary{
+    color: white;
+    background-color: #56ccf2;
+    border: none;
+    border-radius: .4em;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #2D9CDB;
+}
+
+.shop-item{
+    margin: 30px;
+}
+
+.shop-item-title{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image{
+    height: 250px;
+    width: 250px;
+}
+
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.shop-item-price{
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items{ /*screen size*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /*space items between and around*/
+}
+
+.cart-header{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+}
+/*in this div because using flex items % below will equal 100%*/
+.cart-row{
+    display: flex;
+}
+
+.cart-item{
+    width: 45%;
+}
+
+.cart-price{
+    width: 20%;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.cart-quantity{
+    width: 35%;
+}
+
+.cart-item-title{
+    color: #333;
+    margin-left: 1.5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image{
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger{
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover{
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56ccf2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+/*have to do both last-child item, first adds a line accross, second removes the individual borders as the rows above ahve*/
+.cart-row:last-child{
+    border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column{
+    border: none;
+}
+
+.cart-total{
+    text-align: end;  /*text will go to end of line*/
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+/*color = fontcolor*/
+/*video 1:35*/
